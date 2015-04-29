@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <!--skip-->
+        <title>ThunderRTC Demo: Data Channel File-sharing</title>
+        <link rel="stylesheet" type="text/css" href="css/landing.css" />
+        <link rel="stylesheet" type="text/css" href="/thunderrtc/thunderrtc.css" />
+        <!--hide-->
+
+        <!-- Prettify Code -->
+        <script type="text/javascript" src="js/prettify/prettify.js"></script>
+        <link rel="stylesheet" type="text/css" href="js/prettify/prettify.css" />
+                <script type="text/javascript" src="js/prettify/loadAndFilter.js"></script>
+        <script type="text/javascript" src="js/prettify/jquery-1.9.1.min.js"></script>
+
+        <!--show-->
+        <!-- Assumes global locations for socket.io.js and thunderrtc.js -->
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="/thunderrtc/thunderrtc.js"></script>
+        <script type="text/javascript" src="/thunderrtc/thunderrtc_ft.js"></script>
+        <script type="text/javascript" src="js/demo_data_channel_filesharing.js"></script>
+
+        <!--hide-->
+        <!-- Styles used within the demo -->
+        <style type="text/css">
+            .alert img {
+                float:left;
+                padding-right: 10px;
+            }
+
+            .peerblock {
+                width: 800px;
+                border-radius:2px;
+                border:1px solid gray;
+            }
+
+            .receiveBlock {
+                width: 500px;
+                margin:10px;
+                display: inline-block;
+            }
+            .dragndrop {
+                display: inline-block;
+                padding:2em;
+                margin: 2px;
+                border:2px solid black;
+                border-radius: 5px;
+            }
+            .dragndropStatus {
+                display: inline-block;
+            }
+            .connecting {
+                background-color: yellow;
+            }
+            .usesSockets {
+                background-color: pink;
+            }
+            .notConnected {
+                visibility:hidden;
+            }
+            .connected {
+                background-color: #e0ffe0;
+            }
+            .notConnected:hover {
+                margin: 1px;
+                border-width: 3px;
+            }
+            .connected:hover {
+                margin: 1px;
+                border-width:3px;
+            }
+            .connectButton {
+                padding:2em;
+            }
+
+        </style>
+        <!--show-->
+    </head>
+    <body onload="connect()">
+        <!--hide-->
+        <div id="container">
+            <div id="header">
+                <a href="index.html"><img id="logo_thunderrtc" src="images/thunderrtc_logo.png" alt="thunderrtc" style="" /></a>
+            </div>
+            <div id="menu"><a class="menu_link" href="index.html"><div class="menu_item">Local Demos</div></a><a class="menu_link" href="https://github.com/CosRTC/thunderrtc/tree/master/docs"><div class="menu_item">Documentation</div></a><a class="menu_link" href="https://groups.google.com/forum/#!forum/thunderrtc"><div class="menu_item">Support: Discussion Group</div></a><a class="menu_link" href="http://www.thunderrtc.com/"><div class="menu_item">ThunderRTC.com</div></a></div>
+            <div id="main">
+                <!-- Main Content -->
+                <h1>ThunderRTC Demo: Data Channel File-sharing</h1>
+                <p>This application demonstrates file sharing using the thunderrtc.sendData method.
+                    It should connect to the server upon start up, and display drag-and-drop areas for other peers.</p>
+
+                <p>To use it, connect to a peer then drop a file into the drag-and-drop area for that peer. The peer should receive it.
+                </p>
+
+                <p class="alert"><img alt="Warn" height="32" width="32" src="images/br_status_warn.png" />
+                    This demo requires reliable data channels which means it needs Firefox or Chrome (version 32+).
+                    In the absence of reliable data channels it will fallback to using websockets to transfer a file.
+                    Notice that it uses thunderrtc_ft.js as well as thunderrtc.js.
+                </p>
+                <hr />
+                <h2>The Demo</h2>
+                <!--show-->
+                <div id="iam">Obtaining ID...</div><BR />
+                <div id="peerZone">
+                </div>
+
+                <!--hide-->
+                <hr />
+
+                <h2>The Code</h2>
+                <h3>HTML</h3>
+                <pre  id="prettyHtml" class="prettyprint linenums:1">
+
+                </pre>
+                <h3>JavaScript</h3>
+                <p>The contents of demo_instant_messaging.js:</p>
+
+                <pre  id="prettyJS" class="prettyprint linenums:1">
+                </pre>
+
+
+                <!-- Runs the SyntaxHighlighter -->
+                <script type="text/javascript">
+                    loadAndFilter(window.location.href, "prettyHtml",2 );
+                    loadAndFilter(getHelperPath("js"), "prettyJS", 2);
+                </script>
+
+                <!-- End Main Content -->
+
+            </div>
+            <div id="footer">
+                <a href="http://www.CosRTC.com/?from=landing"><img id="logo_CosRTC" src="images/CosRTC_logo_white.png" height="40" width="150" alt="Created By CosRTC Software Inc." /></a>
+                <a href="http://www.thunderrtc.com/?from=landing"><img id="logo_pb_thunderrtc" src="/thunderrtc/img/powered_by_thunderrtc.png" height="60" width="200" alt="Powered By ThunderRTC" /></a>
+                <p><em>&copy; 2014 - CosRTC Software Inc., All Rights Reserved.</em></p>
+                <p id="license">ThunderRTC source code released under a BSD2 License. <a href="https://github.com/CosRTC/thunderrtc/blob/master/LICENSE">See LICENSE file in project folder</a> for details.</p>
+            </div>
+
+        </div>
+        <!--show-->
+    </body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name"        : "thunderrtc_server_example",
+  "version"     : "0.1.6",
+  "author"      : "CosRTC Software Inc. <info@CosRTC.com> (http://CosRTC.com/)",
+  "description" : "Simple ThunderRTC server example which includes ThunderRTC, Express, and Socket.io",
+
+  "private"     : true,
+
+  "scripts": {
+    "start"     : "node server.js"
+  },
+
+  "dependencies" : {
+    "thunderrtc"   : "1.0.x",
+    "express"   : "*",
+    "socket.io" : "0.9.x"
+  },
+
+  "license"     : "BSD2",
+
+  "engines": {
+    "node"      : ">=0.8"
+  }
+}

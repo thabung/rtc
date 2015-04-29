@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <!--skip-->
+        <title>ThunderRTC Demo: Data Channel Messaging</title>
+        <link rel="stylesheet" type="text/css" href="/thunderrtc/thunderrtc.css" />
+
+        <!--hide-->
+        <link rel="stylesheet" type="text/css" href="css/landing.css" />
+
+        <!-- Prettify Code -->
+        <script type="text/javascript" src="js/prettify/prettify.js"></script>
+        <link rel="stylesheet" type="text/css" href="js/prettify/prettify.css" />
+        <script type="text/javascript" src="js/prettify/loadAndFilter.js"></script>
+        <script type="text/javascript" src="js/prettify/jquery.min.js"></script>
+
+        <!--show-->
+        <!-- Assumes global locations for socket.io.js and thunderrtc.js -->
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="/thunderrtc/thunderrtc.js"></script>
+        <script type="text/javascript" src="js/demo_data_channel_messaging.js"></script>
+        <!--hide-->
+        <!-- Styles used within the demo -->
+        <style type="text/css">
+            .alert img {
+                float:left;
+                padding-right: 10px;
+            }
+            #sendMessageArea{
+                float:left;
+                width:400px;
+                padding-right:20px;
+            }
+            #sendMessageText{
+                width:100%;
+            }
+            #conversation {
+                height:300px;
+                border:solid 1px gray;
+                overflow-y:scroll;
+            }
+        </style>
+        <!--show-->
+    </head>
+    <body onload="connect()">
+        <!--hide-->
+        <div id="container">
+            <div id="header">
+                <a href="index.html"><img id="logo_thunderrtc" src="images/thunderrtc_logo.png" alt="ThunderRTC" style="" /></a>
+            </div>
+            <div id="menu"><a class="menu_link" href="index.html"><div class="menu_item">Local Demos</div></a><a class="menu_link" href="https://github.com/CosRTC/thunderrtc/tree/master/docs"><div class="menu_item">Documentation</div></a><a class="menu_link" href="https://groups.google.com/forum/#!forum/thunderrtc"><div class="menu_item">Support: Discussion Group</div></a><a class="menu_link" href="http://www.thunderrtc.com/"><div class="menu_item">ThunderRTC.com</div></a></div>
+            <div id="main">
+                <!-- Main Content -->
+                <h1>ThunderRTC Demo: Data Channel Messaging</h1>
+                <p>This application demonstrates text messaging using data channels via the thunderrtc.sendDataP2P method.</p>
+
+                <hr />
+
+                <h2>The Demo</h2>
+          <!--show-->
+                <div id="sendMessageArea">
+                    <div id="iam">Obtaining ID...</div>
+                    <textarea id="sendMessageText"></textarea>
+                    <div id="otherClients"></div>
+                </div>
+                <div id="receiveMessageArea">
+                    Received Messages:
+                    <div id="conversation"></div>
+                </div>
+          <!--hide-->
+
+                <hr />
+
+                <h2>The Code</h2>
+                <h3>HTML</h3>
+                <pre  id="prettyHTML" class="prettyprint linenums:1">
+                </pre>
+
+                <h3>JavaScript</h3>
+                <p>The contents of demo_instant_messaging.js:</p>
+                <pre  id="prettyJS" class="prettyprint linenums:1">
+            </pre>
+
+
+                <!-- Runs the SyntaxHighlighter -->
+                <script type="text/javascript">
+                    loadAndFilter(window.location.href, "prettyHTML",2 );
+                    loadAndFilter(getHelperPath("js"), "prettyJS", 2);
+                </script>
+
+                <!-- End Main Content -->
+            </div>
+
+            <div id="footer">
+                <a href="http://www.CosRTC.com/?from=landing"><img id="logo_CosRTC" src="images/CosRTC_logo_white.png" height="40" width="150" alt="Created By CosRTC Software Inc." /></a>
+                <a href="http://www.thunderrtc.com/?from=landing"><img id="logo_pb_thunderrtc" src="/thunderrtc/img/powered_by_thunderrtc.png" height="60" width="200" alt="Powered By ThunderRTC" /></a>
+                <p><em>&copy; 2014 - CosRTC Software Inc., All Rights Reserved.</em></p>
+                <p id="license">ThunderRTC source code released under a BSD2 Lcense. <a href="https://github.com/CosRTC/thunderrtc/blob/master/LICENSE">See LICENSE file in project folder</a> for details.</p>
+            </div>
+
+            <br>
+        </div>
+        <!--show-->
+    </body>
+</html>
